@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <title>Document</title>
+  <style>
+    body{
+      transition: .5s;
+    }
+    .image{
+      object-fit: cover;
+      width: 100%;
+    }
+    .top-txt{
+      font-size: 1.6rem;
+    }
+    p{
+      margin: 0;
+    }
+    .text{
+      letter-spacing: 1.5rem;
+    }
+    .bottom-txt{
+      letter-spacing: .1rem;
+    }
+    .corner::before{
+      content:'';
+      position: absolute;
+      display:block;
+      width: calc(10rem + 5vw);
+      height: calc(10rem + 5vw);
+      background-color: #fff;
+      transform: rotate(45deg);
+      bottom:-42%;
+      left: -12%;
+      box-shadow: 0 -8px 5px -8px rgba(0,0,0,.2);
+      /* background-color: aquamarine; */
+    }
+    .corner::after{
+      content:'';
+      position: absolute;
+      display:block;
+      width: calc(10rem + 5vw);
+      height: calc(10rem + 5vw);
+      background-color: #fff;
+      transform: rotate(45deg);
+      top:-42%;
+      right:-12%;
+      box-shadow: 0 8px 5px -8px rgba(0,0,0,.2);
+      /* background-color: red; */
+    }
+
+    @media (max-width:992px){
+      .corner::before{
+        left: -17%;
+      }
+      .corner::after{
+        right: -17%;
+      }
+    }
+    @media (max-width:768px){
+      .corner::before,.corner::after{
+        width:0;
+        height:0;
+      }
+      .container{
+        margin-top: 0px;
+      }
+      
+    }
+  </style>
+</head>
+<body class="vh-100 d-flex">
+  <div class="container m-auto p-0">
+    <div class="d-flex flex-md-row flex-column corner position-relative ">
+      <div class="col-12 col-md-4 p-0 ">
+        <img src="https://picsum.photos/1200/580/?random=1" class="image h-100">
+      </div>
+      <div class="col-12 col-md-8 pt-5">
+        <div class="txt d-flex flex-column w-75 mx-auto">
+          <div class="top-txt mb-5">
+            <p>Front-End Designer</p>
+            <h2 class="display-4">Raquel Yang</h2>
+            <p class="text">泰山職訓局</p>
+          </div>
+          <div class="bottom-txt mb-4">
+            <p>住址：新北市泰山區貴子里123號</p>
+            <p>電話：0900-123-456</p>
+            <p>E-Mail:loremmmm@gmail.com</p>
+            <p>網站：https://www.google.com</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
